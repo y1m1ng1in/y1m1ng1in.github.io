@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/browserDetection/dist/jquery.browser.detection.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Staatliches' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Featured Work of Yiming Lin</title>
+
+    <style>
+      body {
+        margin: 0px;
+      }
+
+      html, body { 
+        height: 100%; 
+        width: 100%; 
+        margin: 0; 
+        overflow-x: hidden;
+      }
+
+      .header {
+        margin: 0px;
+        height: 5%;
+        /* border-style: solid; */ /* remove */
+        font-family: 'Cinzel';
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+      }
+
+      .header-nav {
+        display: inline-block;
+        margin-right: 6%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #header-home {
+        margin-left: 1%;
+      }
+
+      .header a:link {
+        color: black;
+        text-decoration: none;
+      }
+
+      .header a:visited {
+        color: black; 
+      }
+
+      .header a:hover {
+        color: red; /* temp color */
+      }
+
+      .header a:active {
+        font-weight: bold;
+      }
+
+      .feature-work-container-odd {
+        padding: 1px;
+        /* border: solid; */ 
+        background-color:ghostwhite;
+        height: 50%;
+        width: 100%;
+        margin: 0%;
+        position: relative;
+        overflow: hidden;  /* should return to hidden */
+      }
+
+      .feature-work-container-odd-expended {
+        padding: 1px;
+        background-color: ghostwhite;
+        width: 100%;
+        height: 100%;
+        margin: 0%;
+        position: relative;
+      }
+
+      .feature-work-container-even {
+        padding: 1px;
+        /* border: solid; */
+        background-color:white;
+        height: 50%;
+        width: 100%;
+        margin: 0%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-work-img-container {
+        display: inline-block;
+        position: absolute;
+        /* border: solid; */
+        left: 6%;
+        top: 10%;
+        width: 35%;
+        height: 80%;
+        padding: 0;
+      }
+
+      .feature-work-img-container img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .feature-work-img-title {
+        position: absolute;
+        bottom: 1px;
+        right: 10px;
+        font-family: 'Cinzel';
+        font-size: 45px;
+        font-weight: bold;
+        text-align: right;
+        color: white;
+      }
+
+      .feature-work-text-container {
+        /* border: solid; */
+        display: inline-block;
+        position: absolute;
+        left: 48%;
+        width: 46%;
+        font-family: 'Cardo';
+        font-size: 20px;
+        top: 40%;
+        transform: translateY(-40%);
+        overflow: hidden;
+      }
+
+      .feature-work-expend-icon {
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .feature-work-fold-icon {
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .first-featured-work-expended-text-container {
+        position: absolute;
+        top: 100%;
+        font-family: 'Cardo';
+        font-size: 20px;
+        overflow: hidden;
+      }
+      
+      /*
+      .first-featured-work-text-container-expended {
+        height: 70%;
+      }
+      */
+
+      #first-feature-work-full-width-expended {
+        background-color: ghostwhite;
+        margin: 0%;
+        padding: 1px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: visible;
+      }
+
+      #first-feature-work-full-width-expended-text-container-1 {
+        position: absolute;
+        left: 6%;
+        top: 3%;
+        height: 80%;
+        width: 33%;
+        /* border: solid; */
+        font-family: 'Cardo';
+        font-size: 20px;
+      }
+
+      #first-feature-work-full-width-expended-img-container-1 {
+        position: absolute;
+        right:5%;
+        top: -15%;
+        height: 80%;
+        width: 50%;
+        padding: 0;
+        overflow: visible;
+      }
+
+      #first-feature-work-full-width-expended-img-1 {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The nav bar -->
+    <div class="header">
+      <div id="header-home" class="header-nav">
+        <a href="index.html">Home</a>
+      </div>
+      <div id="header-featured-work" class="header-nav">
+        <a href="featuredworks.html">Featured works</a> 
+      </div>     
+    </div>
+    
+    <!-- The first featured work with parts of expended -->
+    <div id="first-featured-work" class="feature-work-container-odd">
+      <div id="first-featured-work-img-container" class="feature-work-img-container">
+        <img src="./asserts/feature-work-1.JPG">
+        <span class="feature-work-img-title">
+          Real-time<br>courier assistor
+        </span>
+      </div>
+      <div id="first-featured-work-text-container" class="feature-work-text-container">
+        <p>
+          The real-time courier assistor is the software that helps couriers to find a optimized route to deliver
+          packages.
+        </p>
+        <p>
+          The software allows couriers to scan packages and then an initial route to deliver those 
+          packages are generated. When the courier starts delivering, the software detects road interrupts based 
+          on the real-time road conditions and adjust route. 
+        </p>
+        <p>
+          The software also provides courier with summarys of delivering when all the packages are delivered or 
+          delivering ended up with some packages are not delivered. The route of the delivery, the packages 
+          information and other related messages are recorded.
+        </p>
+        <p class="more">
+          ...
+        </p>
+        <p id="first-featured-work-expended-container-1">
+          Real-time courier assistor is the software which is implemented as the project of
+          object-oriented programming course (2018 Spring) in Portland State University. 
+        </p>
+        <p id="first-featured-work-expended-container-2">
+          This software is one of the most impressive projects to me since I began to study computer science. 
+          It takes three weeks to design, implement and test, it requires a lot of knowledge of graph theory.
+          It is also the first project of mine to solve real world problems.
+        </p>
+      </div>
+      <div id="first-featured-work-expend-icon" class="feature-work-expend-icon">
+        <i class="material-icons" style="font-size:36px">expand_more</i>   
+      </div>
+      <!--
+      <div id="first-featured-work-fold-icon" class="feature-work-fold-icon">
+        <i class="material-icons" style="font-size:36px">expand_less</i>
+      </div>
+      -->
+    </div>
+
+    <!-- The first featured work: 100% width hidden part -->
+    <div id="first-feature-work-full-width-expended">
+      <div id="first-feature-work-full-width-expended-text-container-1">
+        <p>
+          To provide couriers with convenience, the software allows couriers to check current 
+          packages on the vehicle at any time. Couriers can also check current route and predetermined
+          route at any time. 
+        </p>
+        <p>
+          When an interrupt occurs such as a road closure, the software prompt couriers that another 
+          quicker route is detected which can save couriers' time. 
+        </p>
+        <p>
+          The software provides couriers with delivery interface that can be used when a certain location
+          arrive, the package is unloaded by that interface. 
+        </p>
+        <p>
+          Finally, the delivery summary is showed on the left-top of the picture. The overall route is 
+          recorded and all the traffic conditions during the delivery process has been recorded.
+        </p>
+      </div>
+      <div id="first-feature-work-full-width-expended-img-container-1">
+        <img id="first-feature-work-full-width-expended-img-1" src="./asserts/fw1.jpg">
+      </div>
+      <div id="first-featured-work-fold-icon" class="feature-work-fold-icon">
+        <i class="material-icons" style="font-size:36px">expand_less</i>
+      </div>
+    </div>
+  </body>
+  <script>
+      jQuery('.feature-work-fold-icon').hide();
+      jQuery('#first-featured-work-expended-container-1').hide();
+      jQuery('#first-featured-work-expended-container-2').hide();   
+      jQuery('#first-feature-work-full-width-expended').hide();   
+
+      jQuery('.feature-work-expend-icon').mouseover(function() {
+        jQuery(this).css({
+          'cursor': 'pointer',
+        });
+      });
+
+      jQuery('.feature-work-fold-icon').mouseover(function() {
+        jQuery(this).css({
+          'cursor': 'pointer',
+        });
+      });
+
+      jQuery('.feature-work-expend-icon').click(function() {
+        jQuery(this).hide();
+        jQuery(".feature-work-fold-icon").show();
+        
+        jQuery('.more').hide();
+
+        jQuery('#first-featured-work')
+          .removeClass('feature-work-container-odd')
+          .addClass('feature-work-container-odd-expended');
+        
+        jQuery('#first-featured-work-expended-container-1')
+          .show();
+       
+        jQuery('#first-featured-work-expended-container-2')
+          .show();
+
+        jQuery('#first-feature-work-full-width-expended')
+          .show();
+      });
+
+      jQuery('.feature-work-fold-icon').click(function() {
+        jQuery(this).hide();
+        jQuery('.feature-work-expend-icon').show();
+        
+        jQuery('.more').show();
+
+        jQuery('#first-featured-work')
+          .removeClass('feature-work-container-odd-expended')
+          .addClass('feature-work-container-odd');
+
+        jQuery('#first-featured-work-expended-container-1')
+          .hide();
+       
+        jQuery('#first-featured-work-expended-container-2')
+          .hide();
+
+        jQuery('#first-feature-work-full-width-expended')
+          .hide();
+      });
+  </script>
+</html>

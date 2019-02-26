@@ -1,1 +1,491 @@
-hello world
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/browserDetection/dist/jquery.browser.detection.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Staatliches' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    
+    <title>Yiming Lin</title>
+
+    <style>
+      body {
+        margin: 0px;
+      }
+
+      html, body { 
+        height: 100%; 
+        width: 100%; 
+        margin: 0; 
+        overflow-x: hidden;
+      }
+
+      .header {
+        margin: 0px;
+        height: 5%;
+        /* border-style: solid; */ /* remove */
+        font-family: 'Cinzel';
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+      }
+
+      .header-nav {
+        display: inline-block;
+        margin-right: 6%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #header-home {
+        margin-left: 1%;
+      }
+
+      .header a:link {
+        color: none;
+        text-decoration: none;
+      }
+
+      .header a:visited {
+        color: black; 
+      }
+
+      .header a:hover {
+        color: red; /* temp color */
+      }
+
+      .header a:active {
+        font-weight: bold;
+      }
+
+      a.footer-link {
+        color: none;
+      }
+
+      a.footer-link:visited {
+        color: black;
+      }
+
+      a.footer-link:active {
+        color: grey;
+      }
+
+      .first-block {
+        /* border-style: solid; */ /* remove */
+        padding: 0px;
+        height: 94%;
+        margin: 0px;
+        position: relative;
+      }
+
+      .first-block-text {
+        position: absolute;
+        font-size: 40px;
+        color: white;
+        font-family: 'Staatliches';
+        font-weight: bolder;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+      }
+
+      #first-block-img-1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #first-block-text-title {
+        text-align: center;
+      }
+
+      #first-block-text-description {
+        font-family: 'EB Garamond';
+        font-size: 30px;
+        font-weight: normal;
+        color: white;
+        text-align: center;
+      }
+
+      .second-inner-block {
+        /*border-style: solid;*/ /* remove */
+        height: 47%;
+        margin: 0px;
+        /* padding: 1%; */
+        background-color: whitesmoke;
+        position: relative;
+      }
+
+      .second-inner-block-title-1 {
+        width: 40%;
+        /* height: 100%; */
+        /* border: solid; */
+        position: absolute;
+        font-family: 'Dancing Script'; 
+        text-align: center;
+        font-style: italic;
+        font-size: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .second-inner-block-description-1 {
+        width: 50%;
+        /* height: 100%; */
+        /* border: solid; */ 
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .second-inner-block-title-2 {
+        width: 40%;
+        /* height: 100%; */
+        /* border: solid; */
+        position: absolute;
+        font-family: 'Dancing Script'; 
+        text-align: center;
+        font-style: italic;
+        font-size: 60px;
+        left: 54%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .second-inner-block-description-2 {
+        width: 50%;
+        /* height: 100%; */
+        /* border: solid; */
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      p.second-block-text {
+        text-align: left;
+        font-family: 'Raleway', 'Extra-Light';
+        font-size: 22px;
+      }
+
+      #third-block-img-container {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+      }
+
+      #third-block-text-container {
+        position: absolute;
+        right: 0px;
+        top: 5%;
+        height: 100%;
+        width: 50%;
+        /* border: solid; */
+        overflow: visible;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-bottom: 3%;
+        padding-top: 6%;
+      }
+
+      .third-inner-block-title {
+        /* border: solid; */
+        /*position: absolute;*/
+        font-family: 'Dancing Script'; 
+        text-align: center;
+        font-style: italic;
+        font-size: 60px;
+        float: left;
+        /*top: 37%;
+        left: 37%;*/
+        margin-right: 6%;
+        margin-top: 6%;
+        margin-bottom: 6%;
+      }
+
+      p.third-block-text {
+        text-align: left;
+        font-family: 'Raleway', 'Extra-Light';
+        font-size: 22px;
+      }
+
+      .third-block-img {
+        width: 30%;
+        height: 15%;
+        object-fit: cover;
+      }
+
+      .third-block-text-img {
+        width: 48%;
+        height: 36%;
+        object-fit: cover;
+        position: absolute;
+        left: -15%;
+        top: 50%;
+        overflow: visible;
+        z-index: 2;
+      }
+
+      .last-block-text {
+        font-family: 'Athiti';
+        font-size: 22px;
+      }
+
+      #copyright {
+        position: relative;
+        top: 30%;
+        text-align: center;
+      }
+
+      #third-block-image-background {
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        z-index: -1;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The header of the home page -->
+    <div class="header">
+      <div id="header-home" class="header-nav">
+        <a href="index.html">Home</a>
+      </div>
+      <div id="header-featured-work" class="header-nav">
+        <a href="./featuredworks.html">Featured works</a> 
+      </div>     
+    </div>  
+
+    <!-- The first block of the home page -->
+    <div class="first-block">
+      <div class="first-block-text">
+        <p id="first-block-text-title">Software developer</p>
+        <p id="first-block-text-description">
+          Discover beauty from nature, explore solutions from daily life.
+        </p>
+        <p id="first-block-img-nav" style="text-align:center">
+          <i class='far fa-circle first-block-img-icon' style='font-size:18px'></i>
+          <i class='far fa-circle first-block-img-icon' style='font-size:18px'></i>
+          <i class='far fa-circle first-block-img-icon' style='font-size:18px'></i>
+          <i class='far fa-circle first-block-img-icon' style='font-size:18px'></i>
+        </p>
+      </div>
+      <img id="first-block-img-1" src="./asserts/first1.jpg">
+    </div>
+
+    <!-- The second block of the home page -->
+    <div id="second-block" class="first-block" style="position:relative">
+      <div id="second-block-1" class="second-inner-block" style="background-color:white">
+        <div id="second-block-title-1" class="second-inner-block-title-1">
+          <p>About myself</p>
+        </div>
+        <div id="second-block-description-1" class="second-inner-block-description-1">
+          <p class="second-block-text">
+            I'm Yiming Lin. Currently I'm a undergraduate student in Portland State University and major in computer science. 
+            I come from Shanghai, China. 
+          </p>
+          <p class="second-block-text">
+            When I'm doing researches and studying new knowledge, I often get inspired by everything in this world.
+            For computer science studies, I often come up with new ideas and solutions with the help of common things 
+            in daily life that attracts me. 
+          </p>
+          <p class="second-block-text">
+            Let's see more about myself!
+          </p>
+          <p class="second-block-text">
+            ...
+          </p>
+        </div>
+      </div>
+      <div id="second-block-2" class="second-inner-block" style="background-color:whitesmoke">
+        <div id="second-block-description-2" class="second-inner-block-description-2">
+          <p class="second-block-text">
+            I've been persuing a computer science bachelor degree for almost three years. 
+            During these years studying, the area of machine learning and cloud computing really interest me.
+          </p>
+          <p class="second-block-text">
+            Although what I've learned is the very fundamental things, it brings me much passion, confidence 
+            and background for the future research.
+          </p>
+          <p class="second-block-text">
+            I'm also interested in graph theory. Last year, I developed a software which helps courier to deliver
+            packages by selecting routes based on the real-time traffic conditions, which can be found in my
+            featured works.
+          </p>
+        </div>
+        <div id="second-block-title-2" class="second-inner-block-title-2">
+          <p>About my study</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The third block of the home page -->
+    <div id="third-block" class="first-block" style="position:relative;margin-top:2%">
+      <div id="third-block-img-container"> 
+        <img id="third-block-image" class="third-block-img" src="./asserts/block3.JPG">
+      </div>
+      <div id="third-block-text-container">
+        <p class="third-block-text">
+          In my free time, I would like to go traveling everywhere. The meaning of travel for myself
+          is to discover different beauty in this world, to discover the beauty that people ignore, 
+          to discover the beauty that is too common for people to see. 
+        </p>
+        <p class="third-block-text">
+          I would like to stay in the wilderness to think about the previous work or project,  
+          <span class="third-inner-block-title">About my life</span>
+          or project, previous term's performance, previous year's life, even previous five years' 
+          life. I like those desolated places where I can talk to the universe as if the God was 
+          listening to me. 
+        </p>
+        <p class="third-block-text">
+          Everytime I finished a traveling, I felt like I was a new person. Perhaps this is the source  
+          of my power to keep going.
+        </p>
+        <!-- <img class="third-block-text-img" src="block3-1.JPG"> -->
+      </div>
+    </div>
+
+    <!-- The fourth block of the home page -->
+    <div class="first-block" style="margin-top:1%;height:70%;position:relative;">
+      <div class="first-block-text">
+        <p id="first-block-text-description">
+          Go around the whole world, get inspired by the whole world.
+        </p>
+        <p id="first-block-text-title">Software developer</p>
+      </div>
+      <img id="first-block-img-1" style="height:100%;z-index:0;" src="./asserts/block4.JPG">
+    </div> 
+
+    <!-- The last block of the home page -->
+    <div class="first-block" style="margin-top:0%;padding:1px;background-color:whitesmoke;height:30%;">
+      <p id="copyright">
+        © 2019 Yiming Lin. All rights reserved. <br> <br>
+        <a class="footer-link" href="https://github.com/y1m1ng1in">gitGub</a> <br>
+        <a class="footer-link" href="https://www.linkedin.com/in/yiming-lin-579ab8176">LinkedIn</a>
+      </p>
+    </div> 
+</body>
+<script type="text/javascript">
+  let currentBrowser = jQuery.browserDetection(true);
+
+  console.log(currentBrowser);
+
+  jQuery('#second-block-title-1').css({'transform': 'translate(-80%, -50%)'});
+  jQuery('#second-block-description-1').css({'transform': 'translate(110%, -50%)'});
+  jQuery('#second-block-title-2').hide();
+  jQuery('#second-block-description-2').hide();
+  jQuery('#third-block-image').hide();
+  jQuery('#third-block-text-container').hide();
+
+  let hasBackground = false;
+
+  jQuery('#third-block-image').mouseover(function() {
+    if(hasBackground == false) {
+      jQuery('#third-block').prepend(
+        '<img id="third-block-image-background" src="./asserts/block3.JPG">'
+      );
+      hasBackground = true;
+    }
+  });
+
+  jQuery('#third-block-image').mouseleave(function() {
+    if(hasBackground == true) {
+      jQuery('#third-block-image-background').remove();
+      hasBackground = false;
+    }
+  });
+
+  let fstBlockBackground = 1;
+  jQuery('#first-block-img-nav i:nth-child(1)')
+    .removeClass('far fa-circle')
+    .addClass('fas fa-circle');
+
+  jQuery('.first-block-img-icon').mouseover(function() {
+    jQuery(`#first-block-img-nav i:nth-child(${fstBlockBackground})`)
+      .removeClass('fas fa-circle')
+      .addClass('far fa-circle');
+
+    fstBlockBackground = jQuery(this).index() + 1;
+        
+    jQuery(`#first-block-img-nav i:nth-child(${fstBlockBackground})`)
+      .removeClass('far fa-circle')
+      .addClass('fas fa-circle');
+    jQuery('#first-block-img-1').attr('src', `./asserts/first${fstBlockBackground}.jpg`);
+  });
+
+  let secondBlockFstTitle = false;
+  let secondBlockFstDescription = false;
+
+  let height = window.innerHeight;
+
+  let secondBlockRatio = jQuery(document).height() / jQuery('#second-block').offset().top;
+  let thirdBlockRatio = jQuery(document).height() / jQuery('#third-block').offset().top;
+  console.log(secondBlockRatio);
+
+  jQuery('body').scroll((event) => {
+    let currentHeight = jQuery(document).height();
+    let secondBlockOffset = jQuery('#second-block').offset().top;
+    let secondBlockOffsetPercentage = secondBlockOffset / currentHeight;
+
+    let thirdBlockOffset = jQuery('#third-block').offset().top;
+    let thirdBlockOffsetPercentage = thirdBlockOffset / currentHeight;
+    
+    if(secondBlockOffsetPercentage >= 0.4 / secondBlockRatio 
+      && secondBlockOffsetPercentage <= 0.5 / secondBlockRatio) {
+      if(secondBlockFstTitle == false) {
+      jQuery('#second-block-title-1')
+        .animate({'left': '+=35%'}, 1300);
+      secondBlockFstTitle = true;
+      }
+    
+     if(secondBlockFstDescription == false) {
+        jQuery('#second-block-description-1')
+          .animate({'left': '-=55%'}, 1200);
+      } 
+      secondBlockFstDescription = true;
+    }
+
+    console.log(currentHeight);
+    console.log(thirdBlockOffsetPercentage);
+
+    if(secondBlockOffsetPercentage >= 0 / secondBlockRatio 
+      && secondBlockOffsetPercentage <= 0.1 / secondBlockRatio) {
+      jQuery('#second-block-description-2')
+          .fadeIn('slow');
+
+      jQuery('#second-block-title-2')
+        .fadeIn('slow');
+    }
+
+    if(thirdBlockOffsetPercentage >= 0.30 / thirdBlockRatio 
+      && thirdBlockOffsetPercentage <= 0.37 / thirdBlockRatio) {
+      jQuery('#third-block-image')
+        .show('clip', 800);
+    
+      jQuery('#third-block-text-container')
+        .show('clip', 1000);
+    }
+  });
+</script>
+</html>
